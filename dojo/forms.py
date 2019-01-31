@@ -11,7 +11,7 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ['title', 'content', 'user_agent']
         widgets = {
-            'user_agent': forms.HiddenInput, 
+            'user_agent': forms.HiddenInput,
         }
 
     '''
