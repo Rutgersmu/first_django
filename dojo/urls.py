@@ -7,6 +7,7 @@ app_name = 'dojo'
 
 urlpatterns = [
     path('new/', views.post_new),
+    path('<int:id>/edit/', views.post_edit),
     re_path(r'^sum/(?P<numbers>[\d/]+)/$', views.mysum),
     re_path(r'^hello/(?P<name>[ㄱ-힣]+)/(?P<age>\d+)/$', views.hello),
 
