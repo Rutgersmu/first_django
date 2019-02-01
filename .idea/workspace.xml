@@ -64,8 +64,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blog/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+            <state>
+              <caret lean-forward="true" />
+              <folding>
+                <element signature="e#28#60#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -306,16 +309,15 @@
       <workItem from="1548809783781" duration="3504000" />
       <workItem from="1548825887688" duration="827000" />
       <workItem from="1548914741797" duration="8495000" />
-      <workItem from="1548993954899" duration="10143000" />
+      <workItem from="1548993954899" duration="10801000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103743000" />
+    <option name="totallyTimeSpent" value="104401000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="762" y="0" width="781" height="830" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28987518" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -662,8 +664,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="e#28#60#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
