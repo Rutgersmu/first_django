@@ -14,11 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.shortcuts import redirect
 from django.urls import include, path, re_path
 
-#def root(request):
+# def root(request):
  #   return redirect('blog:post_list')
 
 urlpatterns = [
@@ -28,6 +29,8 @@ urlpatterns = [
     path('blog/', include(('blog.urls', 'blog'), namespace='blog')),  #include 안에 지정!
     path('dojo/', include(('dojo.urls', 'dojo'), namespace='dojo')),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     import debug_toolbar
