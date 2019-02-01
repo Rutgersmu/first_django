@@ -11,6 +11,7 @@ def lnglat_validator(value):
     if not re.match(r'^([+-]?\d+\.?\d*),([+-]\d+\.?\d*)$', value):
         raise ValidationError('Invalid LngLat Type')
 
+
 class Post(models.Model):
     STATUS_CHOICES = (
         ('d', 'Draft'),
@@ -22,7 +23,7 @@ class Post(models.Model):
     # author = models.CharField(max_length=20)
     title = models.CharField(max_length=100, verbose_name='제목') # 길이 제한이 있는 문자영
     content = models.TextField(verbose_name='내용')
-    photo = models.ImageField(blank=True)
+    photo = models.ImageField(blank=True, upload_to='blog/post/%Y/%m/%d')
     tags = models.CharField(max_length=100, blank=True)
     lnglat = models.CharField(max_length=50, blank=True,
                               validators=[lnglat_validator],
@@ -55,4 +56,3 @@ class Tag(models.Model):
 
     def __str__(self):
         return self.name
-
