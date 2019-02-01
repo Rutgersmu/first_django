@@ -5,7 +5,7 @@ from django.db import models
 import re
 from django.forms import ValidationError
 from django.urls import reverse
-from imagekit.models import ImageSpecField
+from imagekit.models import ProcessedImageField
 from imagekit.processors import Thumbnail
 
 
@@ -25,11 +25,10 @@ class Post(models.Model):
     # author = models.CharField(max_length=20)
     title = models.CharField(max_length=100, verbose_name='제목') # 길이 제한이 있는 문자영
     content = models.TextField(verbose_name='내용')
-    photo = models.ImageField(blank=True, upload_to='blog/post/%Y/%m/%d')
-    photo_thumbnail = ImageSpecField(source='photo',
-                                     processors=[Thumbnail(300, 300)],
-                                     format='JPEG',
-                                     options={'quality':60})
+    photo = ProcessedImageField(blank=True, upload_to='blog/post/%Y/%m/%d',
+                                processors=[Thumbnail(300, 300)],
+                                format='JPEG',
+                                options={'quality':60})
 
     tags = models.CharField(max_length=100, blank=True)
     lnglat = models.CharField(max_length=50, blank=True,

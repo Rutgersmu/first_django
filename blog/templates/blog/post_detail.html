@@ -12,7 +12,7 @@
 
 
                 {% if post.photo %}
-                    <img src="{{ post.photo_thumbnail.url }}" style="max-width: 100%;"/>
+                    <img src="{{ post.photo.url }}" style="max-width: 100%;"/>
                 {% endif %}            {# 파일 경로명이 저장되어 있을 경우에 url 계산을 하겠다. #}
 
                 {{ post.content|linebreaks }}
