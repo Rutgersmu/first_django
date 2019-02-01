@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'dojo',
     'accounts',
     'bootstrap4',
+    'imagekit',
 ]
 
 MIDDLEWARE = [
