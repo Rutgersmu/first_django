@@ -30,10 +30,14 @@ urlpatterns = [
     path('dojo/', include(('dojo.urls', 'dojo'), namespace='dojo')),
 ]
 
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += [
+    static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT),
+    re_path(r'^accounts/', include('accounts.urls')),
+]
+
 
 if settings.DEBUG:
     import debug_toolbar
     urlpatterns += [
         re_path(r'^__debug__/', include(debug_toolbar.urls)),
-    ]
+]
