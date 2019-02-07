@@ -9,3 +9,4 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView, name='logout', kwargs={'next_page': settings.LOGIN_URL}),
     path('profile/', views.profile, name='profile'),
 ]
+
